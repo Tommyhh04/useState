@@ -1,7 +1,20 @@
+/*I am not sure why but the code doesnt work unless i import React from "react" manually.
+  Best guess is Scrimba is using an old method to use useState and maybe in later videos it will be the modern way??*/
+
+import React from "react";
+
 function App() {
+  const [things, setThings] = React.useState(["Thing 1", "Thing 2"]);
+
+  function addItem() {
+    const newThingText = `Thing ${things.length + 1}`;
+    setThings((prevState) => [...prevState, newThingText]);
+  }
+  const thingsElements = things.map((thing) => <p key={thing}>{thing}</p>);
   return (
     <div>
-      <h1>Test</h1>
+      <button onClick={addItem}>Add Item</button>
+      {thingsElements}
     </div>
   );
 }
