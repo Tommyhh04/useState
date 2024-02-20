@@ -1,7 +1,7 @@
 /*I am not sure why but the code doesnt work unless i import React from "react" manually. Best guess is Scrimba is using an old method to use useState and maybe in later videos it will be the modern way??*/
-
 import React from "react";
 
+//Very simple app that adds one more item to the list each time a button is pressed. Practice for useState
 function App() {
   const [things, setThings] = React.useState(["Thing 1", "Thing 2"]);
 
