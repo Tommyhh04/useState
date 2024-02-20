@@ -5,6 +5,7 @@ import React from "react";
 function App() {
   const [things, setThings] = React.useState(["Thing 1", "Thing 2"]);
 
+  //Each time the add item button is clicked this code runs. It should add a new paragraph with text "Thing (number)"
   function addItem() {
     const newThingText = `Thing ${things.length + 1}`;
     setThings((prevState) => [...prevState, newThingText]);
